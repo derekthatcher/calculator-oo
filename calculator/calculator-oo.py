@@ -2,7 +2,7 @@
 #    calculator program - OO design
 #--------------------------------------------------
 #    author: derek thatcher
-#    version: 0.1
+#    version: 0.11
 #
 #    simple calculator
 #    +,-,*,/ operators and floating numbers
@@ -18,11 +18,22 @@ from Tkinter import *
 
 class operator:
     
-    # Constructor
+# Constructor
     def __init__(self) :
         self.symbol = ''
         self.description = ''
 
+# Constructor with values
+    def __init__(self,symbol,description) :
+        self.symbol = symbol
+        self.description = description
+
+# Function - operate
+# takes two values and calculates output.
+# might need to take one value in case ot trig functions or powers?
+# unsure as to how much error checking it will need
+    def operate(valA, valB):
+        return float(str(valA)+self.symbol+str(valB))
 
 #--------------------------------------------------
 #    calculator class
@@ -34,7 +45,7 @@ class operator:
 
 class calculator:
     
-    # Constructor
+# Constructor
     def __init__(self) :
 
 #--------------------------------------------------
@@ -46,7 +57,7 @@ class calculator:
 
 class gui:
     
-    # Constructor
+# Constructor
     def __init__(self) :
 
 
