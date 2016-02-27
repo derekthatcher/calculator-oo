@@ -1,1 +1,2 @@
-# paperscissorsrocklizzardspock
+Calculator in python using OO design.
+
